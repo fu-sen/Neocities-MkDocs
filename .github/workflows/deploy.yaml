@@ -1,0 +1,17 @@
+name: Deploy Website
+on: [push]
+jobs:
+  deploy:
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-python@v2
+        with:
+          python-version: 3.x
+      - run: pip install -r requirements.txt
+      - run: mkdocs build
+      - uses: actions/setup-node@v2-beta
+        with:
+          node-version: 16
+      - run: npm install -g neocel
+      - run: neocel -d site -t ${{ secrets.NEOCITIES_API_KEY }} -y
