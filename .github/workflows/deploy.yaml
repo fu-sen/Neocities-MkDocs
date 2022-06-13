@@ -14,4 +14,5 @@ jobs:
         with:
           node-version: 16
       - run: npm install -g neocel
+      - run: cp site/404.html site/not_found.html
       - run: neocel -d site -t ${{ secrets.NEOCITIES_API_KEY }} -y
