@@ -1,5 +1,7 @@
 ## Neocities-MkDocs
 
+<https://github.com/fu-sen/Neocities-MkDocs>
+
 **MkDocs with Neocities (minimal configuration)**
 
 - [Neocities](https://neocities.org/)
