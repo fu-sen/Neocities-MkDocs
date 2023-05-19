@@ -12,7 +12,7 @@ jobs:
       - run: mkdocs build
       - uses: actions/setup-node@v2-beta
         with:
-          node-version: 16
+          node-version: 18
       - run: npm install -g neocel
       - run: cp site/404.html site/not_found.html
       - run: neocel -d site -t ${{ secrets.NEOCITIES_API_KEY }} -y
