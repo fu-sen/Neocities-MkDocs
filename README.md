@@ -1,4 +1,4 @@
-<!-- 2024/04/21 MkDocs 1.6.0 -->
+<!-- 2024/10/03 MkDocs 1.6.1 -->
 
 ## Neocities-MkDocs
 
