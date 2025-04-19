@@ -4,15 +4,15 @@ jobs:
   deploy:
     runs-on: macos-latest
     steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-python@v2
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
         with:
           python-version: 3.x
       - run: pip install -r requirements.txt
       - run: mkdocs build
-      - uses: actions/setup-node@v2-beta
+      - uses: actions/setup-node@v4
         with:
-          node-version: 18
+          node-version: 20
       - run: npm install -g neocel
       - run: cp site/404.html site/not_found.html
       - run: neocel -d site -t ${{ secrets.NEOCITIES_API_KEY }} -y
