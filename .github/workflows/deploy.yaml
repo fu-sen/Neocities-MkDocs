@@ -13,5 +13,5 @@ jobs:
       - run: cp site/404.html site/not_found.html
       - uses: bcomnes/deploy-to-neocities@v3
         with:
-          api_key: ${{ secrets.NEOCITIES_API_KEY }
+          api_key: ${{ secrets.NEOCITIES_API_KEY }}
           dist_dir: site
